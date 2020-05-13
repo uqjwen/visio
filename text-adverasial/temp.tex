@@ -1,0 +1,198 @@
+\documentclass[3p,review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet} % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+%\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+
+
+\usepackage{graphics, epstopdf, epsfig}
+\usepackage{amstext}
+\usepackage{subcaption}
+%\usepackage{color}
+%\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{fixltx2e}
+\usepackage{xcolor}
+%\usepackage{lipsum,graphicx,subcaption}
+\usepackage{xspace}
+
+\newcommand{\ie}{\emph{i.e.,}\xspace}
+\newcommand{\eg}{\emph{e.g.,}\xspace}
+\newcommand{\etal}{\emph{et al.}\xspace}
+\newcommand{\paratitle}[1]{\vspace{1em}\noindent \textbf{#1}}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+
+
+\captionsetup[subfigure]{labelformat=simple,labelsep=colon}
+\renewcommand{\thesubfigure}{}
+
+\modulolinenumbers[5]
+
+\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+%\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{adversarial text mining for speculative sentiment classification }
+%\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+%% Group authors per affiliation:
+%\author{Jiahui Wen\fnref{myfootnote}}
+%\address{Radarweg 29, Amsterdam}
+%\fntext[myfootnote]{Since 1880.}
+
+% \author[address1]{Hongkui Tu}
+% \ead{tuhkjet@foxmail.com}
+
+% \author[address1]{Jiahui Wen\corref{mycorrespondingauthor}}
+% \ead{wen\_jiahui@outlook.com}
+% \cortext[mycorrespondingauthor]{Corresponding author}
+
+% %% or include affiliations in footnotes:
+% \author[address1]{Guangda Zhang}
+% \ead{zhanggd\_nudt@hotmail.com}
+
+
+
+% \address[address1]{National Innovative Institute of Defense Technology, Beijing, China}
+% \address[address3]{National University of Defense Technology, Changsha, China}
+
+\begin{abstract}
+
+\end{abstract}
+
+\begin{keyword}
+% collaborative sentiment classification; speculative similar document
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\section{Introduction}
+
+% 之前的工作建立在文本相似理论的基础上，文本相似理论任务具有相似特征的文本在概率上更有可能属于同一个情感类别。这种理论忽略了一个情感类别的真实文本分布，对于处于边界的文本更具有错误叠加的风险。
+
+
+
+% 给定一个文档，生成器的目的是找到一些文档，使得这些文档和给定的文档具有相同标注或者类别，所以当对一个特定文档的类别不是很确定的时候，可以通过生成器找到与其具有相同类别的文档，通过对这些文档的类别，我们可以更为容易地确定该给定文档地类别。
+GAN utilizes the minimax game theory to generate plausible fake data samples, and has been commonly applied in data augmentation areas such as images, video and texts. Unlike the vanilla GAN that has no control on modes of the data being generated, the proposed model is flexible enough to condition on arbitrary information that is necessary to draw the speculative similar documents (SSD should be explained before). Specifically, the proposed model consist of two components: generator, discriminator and collaborator. For the generator, given an anchor, the goal is to sample candidate documents from the repository. the sampling of the candidate documents are conditioned on necessary information such as class (similar or dissimilar), and the user, item and texts of the anchor document. Therefore, a well-trained generator is expected to output the most plausible documents to our advantage. For example, when the class is set to 1 (similar), the generator can output documents that have the same ground-truth sentiment as the anchor document, and we can incorporate those speculative similar documents for improving classification performance. The discriminator, on the contrary, plays the role of a classifier that focuses on discriminating whether an document is fake from the generator or is real from the original dataset. The generator and the discriminator are trained in an adversarial manner until an equilibrium state is reached, where the discriminator can no longer distinguish whether a document is fake or real. Finally, the collaborator incorporates the speculative similar documents provided by the generator into a collaborative filtering framework, and learns better representations for the users, items and documents, which in turn benefits the learning of generator and discriminator.
+
+
+for a given input $<u_i, v_j, d_{ij}>$, where $d_{ij}$ denotes the document that user $u_i$ writes about $v_j$, the primary goal of the proposed model is to determine the overall sentiment of $d_{ij}$. For speculative sentiment classification, one subgoal is
+
+
+
+for a candidate document, the discriminator simultaneously determine
+
+for discriminator:
+
+\begin{equation}\label{eq:gen}
+\mathbb{E}_{d_k\sim P(d|d_{ij},s)}log[D_{\phi}(d_k,d_{ij},s)]+\mathbb{E}_{d_k'\sim P_{G_{\theta}(d|d_{ij},s)}}log[D_{\phi}(d_k',d_{ij},s)]
+\end{equation}
+
+$\mathbb{E}$
+
+\begin{equation}\label{eq:d1}
+  \mathcal{L}_1^D=\mathbb{E}_{d_k\sim P(d|d_{ij},s)}-logf_1^D(d_k,d_{ij})
+\end{equation}
+
+\begin{equation}\label{eq:d2}
+  \mathcal{L}_2^D=\mathbb{E}_{d_k'\sim P_{G_{\theta}(d|d_{ij},s)}}-log[1-f_1^D(d_k',d_{ij})]
+\end{equation}
+
+
+\begin{equation}\label{eq:d1}
+  \mathcal{L}_3^D=\mathbb{E}_{d_k\sim P(d|d_{ij},s)}[s*log f_2^D(d_k,d_{ij})+(1-s)*log(1-f_2^D(d_k,d_{ij}))]
+\end{equation}
+
+
+\begin{equation}\label{eq:d1}
+  \mathcal{L}_4^D=\mathbb{E}_{d_k'\sim P_{G_{\theta}(d|d_{ij},s)}}[s*log f_2^D(d_k',d_{ij})+(1-s)*log(1-f_2^D(d_k',d_{ij}))]
+\end{equation}
+
+
+for generator:
+
+\begin{equation}\label{eq:g1}
+  \mathcal{L}_1^G=\mathbb{E}_{d_k'\sim P_{G_{\theta}(d|d_{ij},s)}}-logf_1^D(d_k',d_{ij})
+\end{equation}
+
+\begin{equation}\label{eq:g1}
+  \mathcal{L}_2^G=\mathbb{E}_{d_k'\sim P_{G_{\theta}(d|d_{ij},s)}}[s*log f_2^D(d_k',d_{ij})+(1-s)*log(1-f_2^D(d_k',d_{ij}))] )
+\end{equation}
+
+for distribution $P_{G_{\theta}(d|d_{ij},s)}$:
+
+\begin{equation}\label{eq:pg}
+  P_{G_{\theta}(d|d_{ij},s)}=\frac{exp f^G(d_{ij},d,s)}{\sum_{k=1}^Kexp f^G(d_{ij}, d_k, s)}
+\end{equation}
+
+
+the generated documents have to satisfy two requirements, (1)semantically similar to the anchor document, (2) share the same sentiment with the anchor document.
+
+\section{Conclusion}
+\section{policy gradient}
+
+
+
+\begin{equation}\label{eq:p}
+  R(\theta)=\sum_{s\in\{0,1\}}P_{\theta}(s|d_{ij},d_k)V(s,d_{ij},d{k})
+\end{equation}
+
+
+
+
+
+
+
+\bibliographystyle{elsarticle-num}
+% \bibliography{bib}
+
+
+\end{document}\grid
