@@ -1,16 +1,16 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.1.21)  8 MAR 2020 09:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=latex 2020.1.19)  27 MAY 2020 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **temp.tex
 (./temp.tex
 LaTeX2e <2018-12-01>
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/elsarticle/elsarticle.cls
+(d:/texlive/2019/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2019/02/25, 3.2: Elsevier Ltd
 \@bls=\dimen102
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/base/article.cls
+(d:/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+(d:/texlive/2019/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -25,26 +25,26 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(d:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 99.
+Package graphics Info: Driver file: dvips.def on input line 99.
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+(d:/texlive/2019/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
@@ -68,9 +68,8 @@ File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 \@enLab=\toks16
 \@sep=\skip43
 \@@sep=\skip44
-
-(./temp.spl)
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
+ (./temp.spl)
+(d:/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip45
 \bibsep=\skip46
@@ -81,17 +80,17 @@ LaTeX Info: Redefining \cite on input line 694.
 \openout3 = `temp.spl'.
 
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(d:/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count95
@@ -109,9 +108,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \appnamewidth=\dimen117
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/lineno/lineno.sty
+(d:/texlive/2019/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
 \linenopenalty=\count98
 \output=\toks18
 \linenoprevgraf=\count99
@@ -128,16 +126,14 @@ Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
 \bframebox=\box33
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.
-sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.s
-ty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -153,10 +149,9 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -172,22 +167,25 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) (e:/Program Files/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
+)
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen123
 \Hy@linkcounter=\count105
 \Hy@pagecounter=\count106
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
+(d:/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count107
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(d:/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4519.
@@ -199,7 +197,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count108
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/url/url.sty
+(d:/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -221,72 +219,70 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \c@Item=\count111
 \c@Hfootnote=\count112
 )
-Package hyperref Info: Driver (autodetected): hxetex.
+Package hyperref Info: Driver (default): hdvips.
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2018/11/30 v6.88e Hyperref driver for XeTeX
+(d:/texlive/2019/texmf-dist/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2018/11/30 v6.88e Hyperref driver for dvips
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
-)
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
-)
-)
-\pdfm@box=\box34
-\c@Hy@AnnotLevel=\count113
-\HyField@AnnotCount=\count114
-\Fld@listcount=\count115
-\c@bookmark@seq@number=\count116
+(d:/texlive/2019/texmf-dist/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2018/11/30 v6.88e Hyperref definitions for pdfmark specials
+\pdf@docset=\toks19
+\pdf@box=\box34
+\pdf@toks=\toks20
+\pdf@defaulttoks=\toks21
+\HyField@AnnotCount=\count113
+\Fld@listcount=\count114
+\c@bookmark@seq@number=\count115
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip47
-) (e:/Program Files/texlive/2019/texmf-dist/tex/latex/psnfss/times.sty
+))
+(d:/texlive/2019/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/psnfss/helvet.sty
+(d:/texlive/2019/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/psnfss/courier.sty
+(d:/texlive/2019/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 
 Package epstopdf Warning: Drivers other than `pdftex' and `luatex' are not supp
 orted.
 
-)) (e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics/epsfig.sty
+)) (d:/texlive/2019/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 \epsfxsize=\dimen127
 \epsfysize=\dimen128
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
+\@emptytoks=\toks22
 \ex@=\dimen129
 ))
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
+(d:/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+(d:/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+(d:/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen130
@@ -297,39 +293,39 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen135
 \caption@hangindent=\dimen136
 )
-\c@caption@flags=\count117
-\c@ContinuedFloat=\count118
+\c@caption@flags=\count116
+\c@ContinuedFloat=\count117
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count119
-\c@subtable=\count120
+\c@subfigure=\count118
+\c@subtable=\count119
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
+(d:/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@colwidth=\skip48
-\multirow@cntb=\count121
+\multirow@cntb=\count120
 \multirow@dima=\skip49
 \bigstrutjot=\dimen137
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen138
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count122
+\inf@bad=\count121
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count123
-\leftroot@=\count124
+\uproot@=\count122
+\leftroot@=\count123
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count125
-\DOTSCASE@=\count126
+\classnum@=\count124
+\DOTSCASE@=\count125
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
@@ -338,49 +334,49 @@ LaTeX Info: Redefining \cdots on input line 606.
 \big@size=\dimen139
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count127
-\c@MaxMatrixCols=\count128
+\macc@depth=\count126
+\c@MaxMatrixCols=\count127
 \dotsspace@=\muskip11
-\c@parentequation=\count129
-\dspbrk@lvl=\count130
-\tag@help=\toks20
-\row@=\count131
-\column@=\count132
-\maxfields@=\count133
-\andhelp@=\toks21
+\c@parentequation=\count128
+\dspbrk@lvl=\count129
+\tag@help=\toks23
+\row@=\count130
+\column@=\count131
+\maxfields@=\count132
+\andhelp@=\toks24
 \eqnshift@=\dimen140
 \alignsep@=\dimen141
 \tagshift@=\dimen142
 \tagwidth@=\dimen143
 \totwidth@=\dimen144
 \lineht@=\dimen145
-\@envbody=\toks22
+\@envbody=\toks25
 \multlinegap=\skip51
 \multlinetaggap=\skip52
-\mathdisplay@stack=\toks23
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
+(d:/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count134
+\c@tracingmulticols=\count133
 \mult@box=\box37
 \multicol@leftmargin=\dimen146
-\c@unbalance=\count135
-\c@collectmore=\count136
-\doublecol@number=\count137
-\multicoltolerance=\count138
-\multicolpretolerance=\count139
+\c@unbalance=\count134
+\c@collectmore=\count135
+\doublecol@number=\count136
+\multicoltolerance=\count137
+\multicolpretolerance=\count138
 \full@width=\dimen147
 \page@free=\dimen148
 \premulticols=\dimen149
@@ -411,28 +407,28 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \@tempa=\box58
 \@tempa=\box59
 \@tempa=\box60
-\c@columnbadness=\count140
-\c@finalcolumnbadness=\count141
+\c@columnbadness=\count139
+\c@finalcolumnbadness=\count140
 \last@try=\dimen152
 \multicolovershoot=\dimen153
 \multicolundershoot=\dimen154
 \mult@nat@firstbox=\box61
 \colbreak@box=\box62
-\mc@col@check@num=\count142
+\mc@col@check@num=\count141
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics/rotating.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+(d:/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count143
+\c@r@tfl@t=\count142
 \rotFPtop=\skip55
 \rotFPbot=\skip56
 \rot@float@box=\box63
-\rot@mess@toks=\toks24
+\rot@mess@toks=\toks27
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/booktabs/booktabs.sty
+(d:/texlive/2019/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen155
 \lightrulewidth=\dimen156
@@ -444,52 +440,49 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen162
 \cmidrulekern=\dimen163
 \defaultaddspace=\dimen164
-\@cmidla=\count144
-\@cmidlb=\count145
+\@cmidla=\count143
+\@cmidlb=\count144
 \@aboverulesep=\dimen165
 \@belowrulesep=\dimen166
-\@thisruleclass=\count146
-\@lastruleclass=\count147
+\@thisruleclass=\count145
+\@lastruleclass=\count146
 \@thisrulewidth=\dimen167
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty
-Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+(d:/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/float/float.sty
+(d:/texlive/2019/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count148
-\float@exts=\toks25
+\c@float@type=\count147
+\float@exts=\toks28
 \float@box=\box64
-\@float@everytoks=\toks26
+\@float@everytoks=\toks29
 \@floatcapt=\box65
 )
-\@float@every@algorithm=\toks27
-\c@algorithm=\count149
+\@float@every@algorithm=\toks30
+\c@algorithm=\count148
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/algorithmicx/algpseudocode.
-sty
+(d:/texlive/2019/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/algorithmicx/algorithmicx.s
-ty
+(d:/texlive/2019/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count150
-\c@ALG@rem=\count151
-\c@ALG@nested=\count152
+\c@ALG@line=\count149
+\c@ALG@rem=\count150
+\c@ALG@nested=\count151
 \ALG@tlm=\skip57
 \ALG@thistlm=\skip58
-\c@ALG@Lnr=\count153
-\c@ALG@blocknr=\count154
-\c@ALG@storecount=\count155
-\c@ALG@tmpcounter=\count156
+\c@ALG@Lnr=\count152
+\c@ALG@blocknr=\count153
+\c@ALG@storecount=\count154
+\c@ALG@tmpcounter=\count155
 \ALG@tmplength=\skip59
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (e:/Program Files/texlive/2019/texmf-dist/tex/latex/base/fixltx2e.sty
+) (d:/texlive/2019/texmf-dist/tex/latex/base/fixltx2e.sty
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
 Applying: [2015/01/01] Old fixltx2e package on input line 46.
 
@@ -499,13 +492,13 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 (fixltx2e)                See the latexrelease package for details.
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
-) (e:/Program Files/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (d:/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(d:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: dvips.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
@@ -515,10 +508,9 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/tools/xspace.sty
+(d:/texlive/2019/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-(./temp.aux
+) (./temp.aux
 
 LaTeX Warning: Label `eq:d1' multiply defined.
 
@@ -531,35 +523,28 @@ LaTeX Warning: Label `eq:g1' multiply defined.
 )
 \openout1 = `temp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 77.
-LaTeX Font Info:    No file TUptm.fd. on input line 77.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 77.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 86.
+ (d:/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
 *geometry* driver: auto-detecting
-*geometry* detected driver: xetex
+*geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
-* driver: xetex
+* driver: dvips
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -593,104 +578,81 @@ LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box66
-Package hyperref Info: Link coloring OFF on input line 77.
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+Package hyperref Info: Link coloring OFF on input line 86.
+(d:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.s
-ty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count157
+\c@section@level=\count156
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
- (./temp.out) (./temp.out)
+LaTeX Info: Redefining \ref on input line 86.
+LaTeX Info: Redefining \pageref on input line 86.
+LaTeX Info: Redefining \nameref on input line 86.
+
+(./temp.out) (./temp.out)
 \@outlinefile=\write4
 \openout4 = `temp.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 126.
 
-LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 105.
 
+(d:/texlive/2019/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 126.
 
-LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 109.
-
-LaTeX Font Info:    Try loading font information for TU+phv on input line 117.
-LaTeX Font Info:    No file TUphv.fd. on input line 117.
-
-LaTeX Font Warning: Font shape `TU/phv/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 117.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 117.
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 117.
+LaTeX Font Info:    Try loading font information for U+msb on input line 126.
 
-(e:/Program Files/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(e:/Program Files/texlive/2019/texmf-dist/tex/generic/oberdiek/se-ascii-print.d
-ef
-File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
-
-)
-Overfull \hbox (2.22pt too wide) has occurred while \output is active
+Overfull \hbox (1.90002pt too wide) has occurred while \output is active
 [] 
  []
 
 [1
 
 ]
-Missing character: There is no 中 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 国 in font [lmroman10-regular]:mapping=tex-text;!
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 251.
 
 
-Package caption Warning: Unused \captionsetup[subfigure] on input line 38.
+Package caption Warning: Unused \captionsetup[subfigure] on input line 47.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
+[2] [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
  (./temp.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
-
-
-Package rerunfilecheck Warning: File `temp.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `temp.out':
-(rerunfilecheck)             Before: 1A8B06CC1F48ECB8360297879C00BC40
-(rerunfilecheck)             After:  6D36521B7CA3F825833633DC9925D46C.
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 298.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
+Package rerunfilecheck Info: File `temp.out' has not changed.
+(rerunfilecheck)             Checksum: 15BA8A5E097A82EE1FA2543E782144C9;180.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
  )
 (\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 12718 strings out of 492922
- 181092 string characters out of 6130899
- 280907 words of memory out of 5000000
- 16621 multiletter control sequences out of 15000+600000
- 8839 words of font info for 40 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 42i,9n,45p,1822b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 9393 strings out of 492624
+ 136405 string characters out of 6133316
+ 253999 words of memory out of 5000000
+ 13171 multiletter control sequences out of 15000+600000
+ 13743 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,10n,40p,1822b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on temp.pdf (2 pages).
+Output written on temp.dvi (3 pages, 14216 bytes).

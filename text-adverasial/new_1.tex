@@ -1,0 +1,184 @@
+\documentclass{article}
+%<span style="color:#ff0000;">
+%\usepackage[margin=0in,paperheight=8in, paperwidth=4.3in]{geometry}</span>
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\usepackage{setspace}
+%\usepackage{xpatch}
+%\pagestyle{empty}
+%\makeatletter
+%\def\BState{\State\hskip-\ALG@thistlm}
+%\xpatchcmd{\algorithmic}{\itemsep\z@}{\itemsep=0ex}{}{}
+%\makeatother
+
+\renewcommand{\baselinestretch}{1.5}    
+\begin{document}
+% New definitions
+\algnewcommand\algorithmicswitch{\textbf{switch}}
+\algnewcommand\algorithmiccase{\textbf{case}}
+\algnewcommand\algorithmicassert{\texttt{assert}}
+\algnewcommand\algorithmicdefault{\texttt{default}}
+
+\algnewcommand\Assert[1]{\State \algorithmicassert(#1)}%
+% New "environments"
+\algdef{SE}[SWITCH]{Switch}{EndSwitch}[1]{\algorithmicswitch\ #1\ \algorithmicdo}{\algorithmicend\ \algorithmicswitch}%
+\algdef{SE}[CASE]{Case}{EndCase}[1]{\algorithmiccase\ #1}{\algorithmicend\ \algorithmiccase}%
+\algdef{SE}[DEFAULT]{Default}{EndDefault}[1]{\algorithmicdefault\ #1}{\algorithmicend\ \algorithmicdefault}%
+
+\algtext*{EndSwitch}%
+\algtext*{EndCase}%
+\algtext*{EndDefault}%
+
+
+%\setlength{\baselineskip}{20pt}
+
+\begin{algorithm}
+\caption{algpseudocode of l2c\_ref\_model}
+\begin{algorithmic}[1]
+\While{not end}
+	\State //request arbitration
+	\If{$!$ l2c\_noc4\_fifo.empty()}
+		\State $req\_pkt \leftarrow$ l2c\_noc4\_fifo.pop();
+	\ElsIf{$!$ l2c\_noc2\_fifo.empty() $\&$  $!$l2c\_noc3\_fifo.nearfull()}
+		\State $req\_pkt \leftarrow$ l2c\_noc2\_fifo.pop();
+	\ElsIf{$!$ req\_buf.empty() $\&$ $!$l2c\_noc1\_fifo.empty()}
+		\State $req\_pkt \leftarrow$ req\_buf.pop();
+	\Else
+		\State $req\_pkt \leftarrow$ None;
+	\EndIf 
+
+	\State //request processing
+	\Switch {$req\_pkt$.message\_type}
+		\Case{LOAD\_REQ}
+		\State do some actions in this case;
+		\EndCase
+		\Case{STORE\_REQ}
+		\State do some actions in this case;
+		\EndCase
+		\Case{LOAD\_FWD}
+		\State do some actions in this case;
+		\EndCase
+		\Case{STORE\_REQ}
+		\State do some actions in this case;
+		\EndCase
+		\Case{DATA\_EACK}
+		\State do some actions in this case;
+		\EndCase
+		\Case{NC\_LOAD\_REQ}
+		\State do some actions in this case;
+		\EndCase
+		\Case{NC\_STORE\_REQ}
+		\State do some actions in this case;
+		\EndCase
+		\Case{NC\_LOAD\_ACK, NC\_STORE\_ACK}
+		\State do some actions in this case;
+		\EndCase
+		\Default
+		\State do nothing
+		\EndDefault
+	\EndSwitch	
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\clearpage
+
+\begin{algorithm}
+\caption{algpseudocode of l2c\_ref\_model}
+\begin{algorithmic}[1]
+	\Case{LOAD\_REQ}
+		\If{lru\_valid($req\_pkt$.address) $\&$ lru\_clean($req\_pkt$.address)}
+			\State initialize $evc\_pkt$;
+			\State l2c\_noc1\_fifo.push($evc\_pkt$);
+		\ElsIf{lru\_valid($req\_pkt$.address) $\&$ lru\_dirty($req\_pkt$.address)}
+			\State initialize $wb\_pkt$;
+			\State l2c\_noc3\_fifo.push($wb\_pkt$);
+			\State initialize $wbgurad\_pkt$;
+			\State l2c\_noc1\_fifo.push($wbgurad\_pkt$);
+		\EndIf
+		
+		\State initialize $load\_pkt$;
+		\State l2c\_noc1\_fifo.push($load\_pkt$);
+	\EndCase
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{algorithm}
+\caption{Buffering Aware Spike Removal}\label{euclid}
+\begin{algorithmic}[1]
+%\Procedure{MyProcedure}{}
+\Function{AverageProbeStream}{$\textit{spike\_begin}, \textit{spike\_end}$}
+\State $\textit{sum\_sendgap} \gets 0, \textit{sum\_recvgap} \gets 0$
+\If {$\textit{spike\_begin} < \textit{spike\_end}$}
+\For {$\textit{i} = \textit{spike\_begin} \to \textit{spike\_end}$}
+\State $\textit{sum\_sendgap}+=\textit{send\_gap[i]}$
+\State $\textit{sum\_recvgap}+=\textit{recv\_gap[i]}$
+\EndFor
+\For {$\textit{i} = \textit{spike\_begin} \to \textit{spike\_end}$}
+\State $\textit{send\_gap[i]}=\textit{sum\_sendgap}\div(\textit{spike\_end-spike\_begin+1})$
+\State $\textit{recv\_gap[i]}=\textit{sum\_recvgap}\div(\textit{spike\_end-spike\_begin+1})$
+\EndFor
+\EndIf
+\EndFunction
+
+\Function{SpikeRemoval}{}
+\State $\textit{i} \gets 0,\textit{spike\_state} \gets \text{NONE}$
+\If {$ \textit{recv\_gap[0]} > \textit{recv\_gap[1]}+\text{SPIKE\_DOWN} $}
+\State $\textit{spike\_begin} \gets \text{0} $
+\State $\textit{spike\_max} \gets \textit{recv\_gap[0]}$
+\State $\textit{spike\_state} \gets \text{SPIKE\_VALID}$
+\State $\textit{i} \gets 1$
+\EndIf
+
+\For {$\textit{i} \to \textit{recv\_gap.size()-1}$}
+\Switch{$\textit{spike\_state}$}
+\Case{$\text{NONE}$}
+\If {$\textit{recv\_gap[i]} + \text{SPIKE\_UP} < \textit{recv\_gap[i+1]}$}
+\State $\textit{spike\_end} \gets \textit{i}$
+\State $\Call{AverageProbeStream}{$\textit{spike\_begin},\textit{spike\_end}$}$
+\State $\textit{spike\_state} \gets \text{SPIKE\_PENDING}$
+\State $\textit{spike\_begin} \gets \textit{i+1}$
+\State $\textit{spike\_max} \gets \textit{recv\_gap[spike\_begin]}$
+\EndIf
+\State $break$
+\EndCase
+\Case{$\text{SPIKE\_PENDING}$}
+\State $\textit{spike\_max} = max\{\textit{spike\_max},\textit{recv\_gap[i]}\}$
+\If {$ \textit{recv\_gap[i]}+\text{SPIKE\_DOWN} < \textit{spike\_max} $}
+\State $\textit{spike\_state} \gets \text{SPIKE\_VALID}$
+\Else
+\State $break$
+\EndIf
+\EndCase
+\Case{$\text{SPIKE\_VALID}$}
+\If {$\textit{recv\_gap[i]} + \text{SPIKE\_UP} < \textit{recv\_gap[i+1]}$}
+\State {$\textit{spike\_end} \gets i $}
+\State {$\textit{spike\_state} \gets \text{SPIKE\_PENDING}$}
+\State {$\textit{spike\_max} \gets \textit{recv\_gap[i+1]}$}
+\Else
+\If {$ \textit{recv\_gap[i]=recv\_gap.back()} $}
+\State $\textit{spike\_end} \gets i$
+\EndIf
+\State $break$
+\EndIf
+\State $\Call{AverageProbeStream}{\textit{spike\_begin, spike\_end}}$
+\State $\textit{spike\_begin} \gets \textit{i+1}$
+\EndCase
+\EndSwitch
+\EndFor
+\State $\Call{AverageProbeStream}{\textit{spike\_begin, spike\_end}}$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+\end{document} 
+
+
+                                    
+                                

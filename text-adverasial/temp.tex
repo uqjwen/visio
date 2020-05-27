@@ -34,6 +34,15 @@
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
 \renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
 
+%
+%\makeatletter  
+%\newif\if@restonecol  
+%\makeatother  
+%\let\algorithm\relax  
+%\let\endalgorithm\relax  
+%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}%[ruled,vlined]{  
+
+
 
 \captionsetup[subfigure]{labelformat=simple,labelsep=colon}
 \renewcommand{\thesubfigure}{}
@@ -187,6 +196,97 @@ the generated documents have to satisfy two requirements, (1)semantically simila
 
 
 
+\section{dcu}
+%\begin{algorithm}
+%\begin{algorithmic}[1]
+%\While{not end}
+%{
+%	pop req_pkt from fifo;
+%}
+%
+%
+%\end{algorithmic}
+%\end{algorithm}
+
+%\begin{algorithm}  
+%\While{not end}
+%{
+%	\If{not l2c\_noc4\_fifo.empty()}
+%	{
+%		$req\_pkt \leftarrow l2c\_noc4\_fifo.pop()$;
+%	}
+%	\ElseIf{not $l2c\_noc2\_fifo.empty$ \&\& not $l2c\_noc3\_fifo.nearfull()$}
+%	{
+%		$req\_pkt \leftarrow l2c\_noc2\_fifo.pop()$;
+%	}
+%%	\Elseif{not $req_buf.empty()$ and ~ $l2c\_noc1\_fifo.nearfull()$}
+%%	{
+%%		$req\_pkt \leftarrow req\_buf.pop()$;
+%%	}
+%%	\Else
+%%	{
+%%		$req\_pkt \leftarrow None$;
+%%	}
+%}
+%%  $con(r_i)= \Phi$\;  
+%%  \For{$j=1;j \le n;j \ne i$}  
+%%  {  
+%%    float $maxSim=0$\;  
+%%    $r^{maxSim}=null$\;  
+%%    \While{not end of $T_j$}  
+%%    {  
+%%      compute Jaro($r_i,r_m$)($r_m\in T_j$)\;  
+%%      \If{$(Jaro(r_i,r_m) \ge \theta_r)\wedge (Jaro(r_i,r_m)\ge r^{maxSim})$}  
+%%      {  
+%%        replace $r^{maxSim}$ with $r_m$\;  
+%%      }  
+%%    }  
+%%    $con(r_i)=con(r_i)\cup {r^{maxSim}}$\;  
+%%  }  
+%%  return $con(r_i)$\;  
+%\end{algorithm}  
+
+
+\begin{algorithm}
+\caption{algpseudocode of l2c\_ref\_model}
+\begin{algorithmic}[1]
+\While{not end}
+	\If{$not$ l2c\_noc4\_fifo.empty()}
+		\State $req\_pkt \leftarrow$ l2c\_noc4\_fifo.pop();
+	\ElsIf{$not$ l2c\_noc2\_fifo.empty() $and$  $not$ l2c\_noc3\_fifo.nearfull()}
+		\State $req\_pkt \leftarrow$ l2c\_noc2\_fifo.pop();
+	\EndIf
+	
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+%
+%\begin{algorithm}\footnotesize
+%\caption{forward pass and back-propagation learning of HIGAN.}
+%\label{alg:model}
+%\begin{algorithmic}[1]
+%  \Require
+%  the training set $\mathcal{D}$; the learning rate $\eta$; the regularization parameter $\lambda$;
+%  the reviews for each user $u_i$ and item $v_j$, $D_{u_i}$ and $D_{v_j}$; the number of interactive gate layer, $l_g$
+%  \Ensure
+%  latent factors of each user $u_i$ and item $v_j$, $\mathbf{u}_i$ and $\mathbf{v}_j$; semantic representation of each user $u_i$ and $v_j$, $\{\mathbf{d}_i^l\}_{i=1}^M$ and $\{\mathbf{d}_j^l\}_{j=1}^N$; the model parameters,$\Theta$.
+%  \State Initialize all model parameters $\Theta$;
+%  \While{not convergence}
+%  	\State Randomly sample a tuple $(u_i,v_j,r_{ij})\in\mathcal{D}$;
+%  	\State Obtain the user and item embeddings;
+%  	\State Obtain word embeddings for each review in $D_{u_i}$ and $D_{v_j}$;
+%  	\State Calculate review representations $\{\mathbf{d}_{i,k}\}_{k=1}^m$ and $\{\mathbf{d}_{j,t}\}_{t=1}^n$  as specified in Section.\ref{sec:word-level};
+%  	\State Calculate initial semantic representations of the user and item, $\mathbf{d}_i^0$ and $\mathbf{d}_j^0$ by Eqn.\ref{eq:euc}, Eqn.\ref{eq:euc_min} and Eqn.\ref{eq:init_semantic};
+%  	\For{$l=1$;$l<=l_g$;$l++$}
+%  	   \State Calculate attentive semantic representation, $\mathbf{\widetilde{d}}_{i}^l, \mathbf{\widetilde{d}}_{j}^l $, through an mutual attention layer by Eqn.\ref{eqn:att1}, Eqn.\ref{eqn:att2};
+%  	   \State Calculate new semantic representation, $\mathbf{d}_i^{l}, \mathbf{d}_j^l$, through a gate layer by Eqn.\ref{eqn:gat1}, Eqn.\ref{eqn:gat2};
+%  	\EndFor
+%  	\State Calculate the predicted score $\hat{r}_{ij}$ as descried in Section.\ref{sec:prediction};
+%  	\State Calculate $\frac{\partial\mathcal{L}}{\partial\Theta}$ and update $\Theta$ by Eqn.\ref{eq:learn};
+%  \EndWhile
+%\end{algorithmic}
+%\end{algorithm}
 
 
 
