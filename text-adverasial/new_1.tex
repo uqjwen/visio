@@ -107,6 +107,29 @@
 \end{algorithm}
 
 
+\begin{algorithm}
+\caption{algpseudocode of mcu\_ref\_model}
+\begin{algorithmic}[1]
+	\While{not end}
+		\If{$!$memi\_noc4\_fifo.empty()}
+			\If{$req\_pkt$.message\_type == LOAD\_MEM $\&$ $!$memo\_noc4\_fifo.nearfull()}
+				\State $req\_pkt$ = memi\_noc4\_fifo.pop();
+				\State $data \leftarrow$ read\_mem($req\_pkt$.address);
+				\State initialize $load\_mem\_ack$;
+				\State memo\_noc4\_fifo.push($load\_mem\_ack$);
+				
+			\ElsIf{$req\_pkt$.message\_type == STORE\_MEM}
+				\State $req\_pkt$ = memi\_noc4\_fifo.pop();
+				\State write\_mem($req\_pkt$.address, $req\_pkt$.data);				
+				
+			\EndIf
+		\EndIf
+	\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+
+
 
 \begin{algorithm}
 \caption{Buffering Aware Spike Removal}\label{euclid}
