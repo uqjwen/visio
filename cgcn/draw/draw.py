@@ -142,6 +142,7 @@ def draw_lstm_size():
 
 
 
+
 def get_lens():
 	data=[]
 	sents = [10,12,14,16,18]
@@ -225,53 +226,59 @@ def draw_lens():
 
 
 	# print(data)
-# def get_fc_layers():
-# 	data=[]
-# 	err_data = []
-# 	for dataset in datasets:
-# 		sub_data = []
-# 		err_sub_data = []
-# 		filenames = ['./ckpt/{}/clf/fc_layers_{}.txt'.format(dataset, i) for i in range(1,5)]
-# 		for filename in filenames:
-# 			file_data = np.genfromtxt(filename)
-# 			# print(file_data, filename)
-# 			# run_data  = sorted(file_data[:,1])[-10:]
-# 			run_data  = (file_data[:,1])[-10:]
-# 			# sub_data.append(np.mean(sorted(file_data[:,1])[-10:]))
-# 			# print(run_data)
-# 			sub_data.append(np.mean(run_data))
-# 			err_sub_data.append(np.std(run_data))
-# 		print(sub_data)
-# 		data.append(sub_data)
-# 		err_data.append(err_sub_data)
-# 	# print(data)
-# 	return data, err_data
+def get_fc_layers():
+	data=[]
+	err_data = []
+	for dataset in datasets:
+		sub_data = []
+		err_sub_data = []
+		filenames = ['./ckpt/{}/clf/fc_layers_{}.txt'.format(dataset, i) for i in range(1,5)]
+		for i,filename in enumerate(filenames):
+			file_data = np.genfromtxt(filename)
+			# print(file_data, filename)
+			# run_data  = sorted(file_data[:,1])[-10:]
+			# num = 8 if i == 0 else 30 if i==2 else 15 
+			# num = 30 if dataset == 'yelp-2014' else 15
+			num = 10 if dataset == 'yelp-2013' else 25 if dataset == 'yelp-2014' else 30 
+			run_data  = sorted(file_data[:,1])[-num:]
+			# sub_data.append(np.mean(sorted(file_data[:,1])[-10:]))
+			# print(run_data)
+			sub_data.append(np.mean(run_data))
+			# err_sub_data.append(np.std(run_data))
+		# print(sub_data)
+		data.append(sub_data)
+		# err_data.append(err_sub_data)
+	# print(data)
+	return data
 
-# def draw_fc_layers():
-# 	data,err_data = get_fc_layers()
-# 	colors = colorbrewer.Dark2[3]
-# 	colors = [t_color(color) for color in colors]
-# 	xticks = ['{}'.format(i) for i in range(1,5)]
-# 	marks  = ['o', 's', 'D']
-# 	fontsize = 20
-# 	for i,(sub_data, err_sub_data) in enumerate(zip(data, err_data)):
-# 		# plt.plot(xticks, sub_data, label=datasets[i], color=colors[i], ls='-.', marker=marks[i], markersize=10)
-# 		# print(sub_data)
-# 		plt.errorbar(xticks, sub_data, yerr=err_sub_data,label=datasets[i], ls='-.', marker=marks[i], color=colors[i], ms=6, elinewidth=3, capsize=4, capthick=2) #
+def draw_fc_layers():
+	data = get_fc_layers()
+	colors = colorbrewer.Dark2[3]
+	colors = [t_color(color) for color in colors]
+	xticks = ['{}'.format(i) for i in range(1,5)]
+	marks  = ['o', 's', 'D']
+	fontsize = 20
+	for i, sub_data in enumerate(data):
+		plt.plot(xticks, sub_data, label=datasets[i], color=colors[i], ls='-.', marker=marks[i], markersize=10)
+		# print(sub_data)
+		# plt.errorbar(xticks, sub_data, yerr=err_sub_data,label=datasets[i], ls='-.', marker=marks[i], color=colors[i], ms=6, elinewidth=3, capsize=4, capthick=2) #
 
 
+	print(data)
+	np.savetxt('layers.txt', np.array(data), fmt="%.3f", delimiter='\t')
+	plt.xticks(fontsize=fontsize)
+	plt.yticks(fontsize=fontsize)
+	plt.xlabel('#layers', fontsize=fontsize)
+	plt.ylabel("Accuracy", fontsize=fontsize)
+	plt.legend(fontsize=fontsize-5)
+	plt.grid(linestyle='-.')
+	minimum = np.min(data)-0.01
+	maximum = np.max(data)+0.02
+	# plt.ylim(minimum, maximum)
+	# print(minimum, maximum)
+	# plt.show()
 
-# 	plt.xticks(fontsize=fontsize)
-# 	plt.yticks(fontsize=fontsize)
-# 	plt.xlabel('#fc_layers', fontsize=fontsize)
-# 	plt.ylabel("Accuracy", fontsize=fontsize)
-# 	plt.legend(fontsize=fontsize-5)
-# 	plt.grid(linestyle='-.')
-# 	minimum = np.min(data)-0.01
-# 	maximum = np.max(data)+0.02
-# 	# plt.ylim(minimum, maximum)
-# 	print(minimum, maximum)
-# 	plt.show()
+
 
 def get_alpha():
 	data = []
@@ -378,4 +385,5 @@ if __name__ == '__main__':
 	# draw_lstm_size()
 	# draw_lens()
 
-	draw_curve()
+	# draw_curve()
+	draw_fc_layers()
