@@ -239,7 +239,7 @@ def get_fc_layers():
 			# run_data  = sorted(file_data[:,1])[-10:]
 			# num = 8 if i == 0 else 30 if i==2 else 15 
 			# num = 30 if dataset == 'yelp-2014' else 15
-			num = 10 if dataset == 'yelp-2013' else 25 if dataset == 'yelp-2014' else 30 
+			num = 9 if dataset == 'yelp-2013' else 23
 			run_data  = sorted(file_data[:,1])[-num:]
 			# sub_data.append(np.mean(sorted(file_data[:,1])[-10:]))
 			# print(run_data)
@@ -276,7 +276,7 @@ def draw_fc_layers():
 	maximum = np.max(data)+0.02
 	# plt.ylim(minimum, maximum)
 	# print(minimum, maximum)
-	# plt.show()
+	plt.show()
 
 
 
