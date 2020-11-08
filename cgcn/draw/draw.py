@@ -291,12 +291,14 @@ def get_alpha():
 			file_data = np.genfromtxt(filename)
 			# run_data = file_data[:,1][-10:] if dataset == 'yelp-2014' and i==8 else sorted(file_data[:,1])[-10:]
 			run_data = file_data[:,1][-10:] if dataset == 'yelp-2014' and i==7 else sorted(file_data[:,1])[-5:]
-			if dataset == 'yelp-2014':
-				print(np.mean(run_data), i)
+			run_data = file_data[:,1][-20:] if dataset == 'imdb' else run_data
+			# if dataset == 'yelp-2014':
+			# 	print(np.mean(run_data), i)
 			sub_data.append(np.mean(run_data))
 			err_sub_data.append(np.std(run_data))
 
 		data.append(sub_data)
+		print(sub_data)
 		err_data.append(err_sub_data)
 	return data, err_data
 
@@ -380,10 +382,10 @@ def draw_curve():
 		# break
 
 if __name__ == '__main__':
-	# draw_alpha()
+	draw_alpha()
 	# draw_up_size()
 	# draw_lstm_size()
 	# draw_lens()
 
 	# draw_curve()
-	draw_fc_layers()
+	# draw_fc_layers()
