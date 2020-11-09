@@ -290,8 +290,11 @@ def get_alpha():
 		for i,filename in enumerate(filenames):
 			file_data = np.genfromtxt(filename)
 			# run_data = file_data[:,1][-10:] if dataset == 'yelp-2014' and i==8 else sorted(file_data[:,1])[-10:]
-			run_data = file_data[:,1][-10:] if dataset == 'yelp-2014' and i==7 else sorted(file_data[:,1])[-5:]
-			run_data = file_data[:,1][-20:] if dataset == 'imdb' else run_data
+			if i == 0:
+				run_data = sorted(file_data[:,1])[-20:] if dataset == 'imdb' else sorted(file_data[:,1])[-1:]
+			else:
+				run_data = file_data[:,1][-10:] if dataset == 'yelp-2014' and i==7 else sorted(file_data[:,1])[-5:]
+				run_data = file_data[:,1][-20:] if dataset == 'imdb' else run_data
 			# if dataset == 'yelp-2014':
 			# 	print(np.mean(run_data), i)
 			sub_data.append(np.mean(run_data))
@@ -305,6 +308,7 @@ def get_alpha():
 def draw_alpha():
 
 	data, err_data = get_alpha()
+
 
 
 	colors = colorbrewer.Dark2[3]
